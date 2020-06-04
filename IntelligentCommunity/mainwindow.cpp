@@ -1,8 +1,10 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include "adminlogin.h"
 #include <QMessageBox>
 #include <QSqlDatabase>
 #include <QSqlQuery>
+#include <QLineEdit>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -19,6 +21,7 @@ MainWindow::MainWindow(QWidget *parent) :
                               "Unable to establish a database connection.", QMessageBox::Cancel);
     }
     ui->lineEdit->setFocus();
+    ui->lineEdit_2->setEchoMode(QLineEdit::Password);
 }
 
 MainWindow::~MainWindow()
@@ -90,13 +93,17 @@ void MainWindow::on_pushButton_clicked(bool checked)//登录
                 ui->lineEdit->setFocus();
             }
     }else{
-        QMessageBox::warning(this,tr("提示"), tr("请选择您的身份"), QMessageBox::Ok);
+        QMessageBox::warning(this,tr("提示"), tr("请选择您的身份！"), QMessageBox::Ok);
     }
 }
 
 void MainWindow::on_commandLinkButton_clicked(bool checked)//管理员登录
 {
-
+    adminlogin *admin = new adminlogin;
+    admin->setWindowTitle("管理员登录");
+    admin->setWindowIcon(QIcon(":/logo.png"));
+    admin->show();
+    this->hide();
 }
 
 void MainWindow::on_pushButton_2_clicked(bool checked)//关闭窗口

@@ -2,5 +2,7 @@
     <qresource prefix="/">
         <file>背景.png</file>
         <file>logo.png</file>
+        <file>adminlogin.png</file>
+        <file>111.png</file>
     </qresource>
 </RCC>
