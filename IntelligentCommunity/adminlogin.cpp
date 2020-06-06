@@ -53,6 +53,11 @@ void adminlogin::on_pushButton_clicked()
 
 void adminlogin::on_pushButton_2_clicked()
 {
+
+}
+
+void adminlogin::on_commandLinkButton_clicked()
+{
     MainWindow *w = new MainWindow;
     w->show();
     this->close();

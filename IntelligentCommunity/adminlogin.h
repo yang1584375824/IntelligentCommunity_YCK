@@ -20,6 +20,8 @@ private slots:
 
     void on_pushButton_2_clicked();
 
+    void on_commandLinkButton_clicked();
+
 private:
     Ui::adminlogin *ui;
 };
