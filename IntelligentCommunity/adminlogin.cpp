@@ -24,7 +24,7 @@ adminlogin::~adminlogin()
 void adminlogin::on_pushButton_clicked()
 {
     QSqlQuery query;
-    if(query.exec("select * from admin"))
+    if(query.exec("select * from usrlist"))
            {
 
                while(query.next())//遍历数据表格
@@ -35,11 +35,12 @@ void adminlogin::on_pushButton_clicked()
                     QString tel= query.value(1).toString().trimmed();
                     QString IDcard =query.value(2).toString().trimmed();
                     QString password=query.value(3).toString().trimmed();
+                    int mark = query.value(4).toInt();
 
-                    if((ui->lineEdit->text() == id)&&(ui->lineEdit_2->text() == password)||(ui->lineEdit->text() == tel)&&(ui->lineEdit_2->text() == password)||(ui->lineEdit->text() == IDcard)&&(ui->lineEdit_2->text() == password)){
+                    if((ui->lineEdit->text() == id)&&(ui->lineEdit_2->text() == password)&&(mark == 0)||(ui->lineEdit->text() == tel)&&(ui->lineEdit_2->text() == password)&&(mark == 0)||(ui->lineEdit->text() == IDcard)&&(ui->lineEdit_2->text() == password)&&(mark == 0)){
 
-                        QMessageBox::information(this,tr("提示"),tr("登录成功！"),QMessageBox::Ok);
-                        this->close();
+                        QMessageBox::information(this,tr("提示"),tr("管理员登录成功！"),QMessageBox::Ok);
+                         this->close();
                         return;
 
                }

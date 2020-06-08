@@ -45,11 +45,28 @@ void MainWindow::on_pushButton_clicked(bool checked)//登录
                         QString tel= query.value(1).toString().trimmed();
                         QString IDcard =query.value(2).toString().trimmed();
                         QString password=query.value(3).toString().trimmed();
+                        int mark = query.value(4).toInt();
 
-                        if((ui->lineEdit->text() == id)&&(ui->lineEdit_2->text() == password)||(ui->lineEdit->text() == tel)&&(ui->lineEdit_2->text() == password)||(ui->lineEdit->text() == IDcard)&&(ui->lineEdit_2->text() == password)){
+                        if((ui->lineEdit->text() == id)&&(ui->lineEdit_2->text() == password)&&(mark == 1)||(ui->lineEdit->text() == tel)&&(ui->lineEdit_2->text() == password)&&(mark == 1)||(ui->lineEdit->text() == IDcard)&&(ui->lineEdit_2->text() == password)&&(mark == 1)){
 
-                            QMessageBox::information(this,tr("提示"),tr("登录成功！"),QMessageBox::Ok);
+                            QMessageBox::information(this,tr("提示"),tr("用户登录成功！"),QMessageBox::Ok);
                             this->close();
+                            return;
+
+                   }
+                        if((ui->lineEdit->text() == id)&&(ui->lineEdit_2->text() == password)&&(mark == 2)||(ui->lineEdit->text() == tel)&&(ui->lineEdit_2->text() == password)&&(mark == 2)||(ui->lineEdit->text() == IDcard)&&(ui->lineEdit_2->text() == password)&&(mark == 2)){
+
+                            QMessageBox::information(this,tr("提示"),tr("物业登录成功！"),QMessageBox::Ok);
+                            this->close();
+                            return;
+
+                   }
+                        if((ui->lineEdit->text() == id)&&(ui->lineEdit_2->text() == password)&&(mark == 0)||(ui->lineEdit->text() == tel)&&(ui->lineEdit_2->text() == password)&&(mark == 0)||(ui->lineEdit->text() == IDcard)&&(ui->lineEdit_2->text() == password)&&(mark == 0)){
+
+                            QMessageBox::information(this,tr("提示"),tr("您是管理员账户，请转至左下角管理员登录！"),QMessageBox::Ok);
+                            ui->lineEdit->clear();
+                            ui->lineEdit_2->clear();
+                            ui->lineEdit->setFocus();
                             return;
 
                    }
