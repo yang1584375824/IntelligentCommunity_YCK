@@ -6,79 +6,22 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>423</width>
-    <height>276</height>
+    <width>424</width>
+    <height>303</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">#adminlogin{border-image: url(:/111.png);}
+   <string notr="true">#adminlogin{border-image: url(:/1111.png);}
 #adminlogin *{image: url();}</string>
   </property>
-  <widget class="QWidget" name="layoutWidget">
-   <property name="geometry">
-    <rect>
-     <x>80</x>
-     <y>30</y>
-     <width>261</width>
-     <height>131</height>
-    </rect>
-   </property>
-   <layout class="QVBoxLayout" name="verticalLayout">
-    <item>
-     <layout class="QHBoxLayout" name="horizontalLayout">
-      <item>
-       <widget class="QLabel" name="label">
-        <property name="font">
-         <font>
-          <family>微软雅黑</family>
-          <pointsize>15</pointsize>
-          <weight>50</weight>
-          <bold>false</bold>
-          <kerning>true</kerning>
-         </font>
-        </property>
-        <property name="text">
-         <string>账  号：</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLineEdit" name="lineEdit"/>
-      </item>
-     </layout>
-    </item>
-    <item>
-     <layout class="QHBoxLayout" name="horizontalLayout_2">
-      <item>
-       <widget class="QLabel" name="label_2">
-        <property name="font">
-         <font>
-          <family>微软雅黑</family>
-          <pointsize>15</pointsize>
-          <weight>50</weight>
-          <bold>false</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string>密  码：</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLineEdit" name="lineEdit_2"/>
-      </item>
-     </layout>
-    </item>
-   </layout>
-  </widget>
   <widget class="QCommandLinkButton" name="commandLinkButton">
    <property name="geometry">
     <rect>
      <x>-30</x>
-     <y>230</y>
+     <y>260</y>
      <width>71</width>
      <height>41</height>
     </rect>
@@ -93,17 +36,37 @@
   <widget class="QPushButton" name="pushButton">
    <property name="geometry">
     <rect>
-     <x>80</x>
-     <y>190</y>
-     <width>259</width>
+     <x>100</x>
+     <y>220</y>
+     <width>231</width>
      <height>31</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(0, 85, 255);</string>
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
     <string>登录</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit_2">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>150</y>
+     <width>191</width>
+     <height>41</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>110</y>
+     <width>191</width>
+     <height>41</height>
+    </rect>
    </property>
   </widget>
  </widget>
