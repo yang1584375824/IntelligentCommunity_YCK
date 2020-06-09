@@ -24,11 +24,11 @@ PS：登录界面已经全部写好，管理界面都没写。
 
 4.测试账号密码（mark 0为管理员 1为用户 2为物业 ）：
 
-  用户：id:1234  tel:10086  IDcard:100001 pwd:1234 mark:1
+  用户：id:1234  tel:10086  IDcard:100001 pwd:1234 mark:1 name：张三
 
-  物业：id:2345  tel:10010  IDcard:100002 pwd:2345 mark:2
+  物业：id:2345  tel:10010  IDcard:100002 pwd:2345 mark:2 name：李四
   
-  管理员：id：123 tel：10000 IDcard：200001 pwd：123 mark：0
+  管理员：id：123 tel：10000 IDcard：200001 pwd：123 mark：0 name：王五
 
 5.管理员账号密码还未更新【2020.6.6 20:44】V1.0版本已更新
 
